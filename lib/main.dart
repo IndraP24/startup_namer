@@ -52,4 +52,13 @@ class _RandomWordsState extends State<RandomWords> {
           return _buildRow(_suggestion[index]);
         });
   }
+
+  Widget _buildRow(WordPair pair) {
+    return ListTile(
+      title: Text(
+        pair.asPascalCase,
+        style: _biggerFont,
+      ),
+    );
+  }
 }
